@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="top--box">
+      <input type="text" />
+      <img src="./img/Group 269.png" alt="edit icon" />
+    </div>
+    <div class="secondTop--box">
+      <div class="upper--box">
+        <div class="leftinner--box">
+          <img src="./img/person 2.png" alt="person icon" />
+          <p>Total number of People</p>
+        </div>
+        <div class="rightinner--box" onclick="demoSwitch()" id="demoBox">
+          <img src="./img/Group 259.png" alt="demography icon" class="offDemo" id="off-demo" />
+          <img src="./img/Group 259 (1).png" alt="demography icon" class="onDemo" id="on-demo" />
+          <p class="demo-p" id="demographic-p">Demographic</p>
+          <img src="./img/down-chevron 1.png" alt="down arrow" />
+        </div>
+      </div>
+      <div class="lower--box">
+        <img src="./img/image 10.png" alt="lightening icon" id="lighten" class="lightening"/>
+        <img src="./img/turtle_1f422 1.png" alt="turtle image" id="turtle" class="turtlle"/>
+        <p id="numberCount">0</p>
+      </div>
+    </div>
+    <div class="middle--box">
+      <div>
+        <img src="./img/Group 277.png" alt="speed icon" onclick="speedCount()" class="offspeedcount" id="off-speed"/>
+        <img src="./img/Group 272 (1).png" alt="speed icon" onclick="speedCount()" class="onspeedcount" id="on-speed"/>
+        <p class="speedcount" id="speedCount-p">Speed Count</p>
+      </div>
+      <div>
+        <img src="./img/Group 257 (1).png" alt="lock counter icon" onclick="triggerCounter()" class="lock--counter" id="lockCount"/>
+        <img src="./img/Group 257.png" alt="lock counter icon" onclick="triggerCounter()" class="unlock--counter" id="unlockCount"/>
+        <p class="middlebox-p" id="lockCounterP">Lock Counter</p>
+      </div>
+      <div id="saveCount">
+        <img src="./img/Group 274.png" alt="Save counter icon" />
+        <p class="middlebox-p">Save Count</p>
+      </div>
+      <div>
+        <img src="./img/Group 274.png" alt="unknown icon" />
+        <p class="middlebox-p">Unknown icon</p>
+      </div>
+    </div>
+    <div class="mainbutton--box" id="mainbtn--tab">
+      <button class="maincount--button" id="mainCount">
+        <img
+          src="./img/Group 255 (1).png"
+          alt="count trigger button"
+          width="240"
+          height="240"
+          class="unlocked-trigger"
+          id="unlockedBtn"
+        />
+        <img
+          src="./img/Group 255 (2).png"
+          alt="count trigger button"
+          width="240"
+          height="240"
+          class="locked-trigger"
+          id="lockedBtn"
+        />
+      </button>
+    </div>
+    <div class="demopraph--box" id="demobox--content">
+      <div class="demopraph">
+        <div>
+          <img src="./img/Group 275.png" alt="male icon" class="demograph--image" onclick="incrementMale()"/>
+          <p class="personNumber" id="maleCount">0</p>
+          <p class="gender">Male</p>
+        </div>
+        <div>
+          <img src="./img/Group 264.png" alt="female icon" class="demograph--image" onclick="incrementFemale()"/>
+          <p class="personNumber" id="femaleCount">0</p>
+          <p class="gender">Female</p>
+        </div>
+        <div>
+          <img src="./img/Group 265.png" alt="children icon" class="demograph--image" onclick="incrementChild()"/>
+          <p class="personNumber" id="childCount">0</p>
+          <p class="gender">Children</p>
+        </div>
+      </div>
+      <div>
+        <img src="./img/Group 276.png" alt="adding icon" style="margin-top: 20px;">
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
