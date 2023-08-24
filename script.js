@@ -1,12 +1,27 @@
 let startCount = document.getElementById("unlockedBtn")
     let count = 0
-startCount.addEventListener("click", function() {
+   
+function updateCount() {
     const numberCount = document.getElementById("numberCount")
     count++
     numberCount.textContent = count + demoMaleCount + demoFemmaleCount + demoChildCount
+}
+
+
+startCount.addEventListener("click", function() {
+    updateCount()
 })
 
-let mytotalCount = JSON.parse(localStorage.getItem("totalCount"))
+startCount.addEventListener("mousedown", function() {
+    setTimeout(() => {
+        updateCount()
+    }, 5000)
+})
+
+
+
+
+const mytotalCount = JSON.parse(localStorage.getItem("totalCount"))
 
 if (mytotalCount) {
     count = mytotalCount
@@ -26,8 +41,10 @@ function triggerCounter() {
     mainCount.classList.toggle("offshadow:active")
     const lockP = document.getElementById("lockCounterP")
     lockP.classList.toggle("colorBlack")
-
 }
+
+
+
 
 function speedCount() {
     let lighten = document.getElementById("lighten")
@@ -84,8 +101,10 @@ function incrementChild() {
 
 const saveCount = document.getElementById("saveCount")
 saveCount.addEventListener("click", function() {
-    localStorage.setItem("totalCount", JSON.stringify(count + demoMaleCount + demoFemmaleCount + demoChildCount))
+    const storedCount = count + demoMaleCount + demoFemmaleCount + demoChildCount
+    localStorage.setItem("totalCount", JSON.stringify(storedCount))
+    alert("Data Saved")
 })
 
+//localStorage.clear()
 
-localStorage.clear()
